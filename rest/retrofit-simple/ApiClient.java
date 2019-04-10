@@ -13,6 +13,7 @@ public interface ApiClient {
     @POST("authorization")
     Call<Response> authorization(@Header("Authorization") String contentRange, @Body String data);
 	
-	@GET("authorization")
+    @GET("authorization")
     Call<Response> authorization(@Query("source") String source);
+	
 }
