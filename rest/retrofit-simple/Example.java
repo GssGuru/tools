@@ -3,7 +3,7 @@ public class Example {
 	
     void doSome(){
 		
-		Call<Response> call = RetrofitClient.getInstance().getApiClient().authorization("some headers");
+	Call<Response> call = RetrofitClient.getInstance().getApiClient().authorization("some headers");
         call.enqueue(new Callback<Response>() {
             @Override
             public void onResponse(Call<okhttp3.Response> call, retrofit2.Response<Response> response) {
