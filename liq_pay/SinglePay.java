@@ -1,11 +1,11 @@
 
 public class SinglePay {
-	
-	privat String sum = "5" // PRICE
-	
-    void pay(){
+
+    void pay(){	
+	    
+	String sum = "5" // PRICE
 		
-		HashMap<String, String> map = new HashMap<String, String>();
+	HashMap<String, String> map = new HashMap<String, String>();
         map.put("public_key", "PUBLIC_KEY");
         map.put("action", "auth");
         map.put("amount", sum);
@@ -39,5 +39,5 @@ public class SinglePay {
                 // Some Error
             }
         });
-	}
+     }
 }
