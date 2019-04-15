@@ -1,14 +1,14 @@
 
 public class Subscribe {
 	
-	privat String sum = "5" // PRICE
-	
     void subscribe(){
+	    
+	String sum = "5" // PRICE
 		
-		HashMap<String, String> map = new HashMap<String, String>();
+	HashMap<String, String> map = new HashMap<String, String>();
         map.put("public_key", "PUBLIC_KEY");
-		map.put("version", "3");
-		map.put("action", "subscribe");
+	map.put("version", "3");
+	map.put("action", "subscribe");
         map.put("amount", sum);
         map.put("currency", "UAH");
         map.put("description", "Оплата за подписку");
@@ -16,7 +16,7 @@ public class Subscribe {
         map.put("language", "ru");
         map.put("server_url", "https://gss.guru");
 		
-		map.put("subscribe", "2");
+	map.put("subscribe", "2");
         map.put("subscribe_date_start", "yyyy-MM-dd HH:mm:ss");
         map.put("subscribe_periodicity", "month");
 
@@ -32,10 +32,10 @@ public class Subscribe {
                     }
                     assert object != null;
                     if ("subscribed".equals(object.optString("status"))) {
-						String resOrderId = object.optString("liqpay_order_id"); // Нужен для отписки
-						// success Pay
+			String resOrderId = object.optString("liqpay_order_id"); // Нужен для отписки
+			// success Pay
                     } else {
-						// Some Error
+			// Some Error
                     }
                 }
             }
@@ -45,5 +45,5 @@ public class Subscribe {
                 // Some Error
             }
         });
-	}
+    }
 }
