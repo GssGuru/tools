@@ -27,9 +27,9 @@ public class SinglePay {
                     }
                     assert object != null;
                     if ("success".equals(object.optString("status"))) {
-						// success Pay
+			// success Pay
                     } else {
-						// Some Error
+			// Some Error
                     }
                 }
             }
